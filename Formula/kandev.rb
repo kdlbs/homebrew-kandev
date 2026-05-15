@@ -2,28 +2,28 @@ class Kandev < Formula
   desc "Manage tasks, orchestrate agents, review changes, and ship value"
   homepage "https://github.com/kdlbs/kandev"
   license "AGPL-3.0-only"
-  version "0.45.0"
+  version "0.48.0"
 
   # Node is required: the CLI launcher and Next.js standalone server both need it.
   depends_on "node"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/kdlbs/kandev/releases/download/v0.45.0/kandev-macos-arm64.tar.gz"
-      sha256 "c890c0d380301e8656fb45b1a35a7a5ba4115e49812a5f2ae544a41e9aeed93c"
+      url "https://github.com/kdlbs/kandev/releases/download/v0.48.0/kandev-macos-arm64.tar.gz"
+      sha256 "b87202239c5053be29cb797f57e780ecde349ec4e3b5e22e2ab8d8547ec19a8c"
     else
-      url "https://github.com/kdlbs/kandev/releases/download/v0.45.0/kandev-macos-x64.tar.gz"
-      sha256 "9fcaf6d3d5611df1536174ddcda610873c85d7b0aa7fb0a05ac4fca8ee1988eb"
+      url "https://github.com/kdlbs/kandev/releases/download/v0.48.0/kandev-macos-x64.tar.gz"
+      sha256 "a23bf025456ab93dd993267ed5c8367b10eaa24377cb003df7b1185141b115ca"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/kdlbs/kandev/releases/download/v0.45.0/kandev-linux-arm64.tar.gz"
-      sha256 "d789356d9633890b27aa966e69af528341698e230a29b8e6928031c95ed2a7ac"
+      url "https://github.com/kdlbs/kandev/releases/download/v0.48.0/kandev-linux-arm64.tar.gz"
+      sha256 "3fb1d5e6216897727051a025429f418c330b2c3e2c309bdb3c42a043ebee3ed8"
     else
-      url "https://github.com/kdlbs/kandev/releases/download/v0.45.0/kandev-linux-x64.tar.gz"
-      sha256 "1d9d0734b9b9fa4ccf03b7fbecc6e3d6f6f0bfabdd85e2050a535ab5d25477d1"
+      url "https://github.com/kdlbs/kandev/releases/download/v0.48.0/kandev-linux-x64.tar.gz"
+      sha256 "f1029ec01236093b13636abc3407a6983712899c61abc7d359701f1dfe9819de"
     end
   end
 
