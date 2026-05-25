@@ -1,29 +1,31 @@
+# Template used by update-homebrew-tap.sh. Placeholder strings are replaced at
+# release time before this formula is pushed to kdlbs/homebrew-kandev.
 class Kandev < Formula
   desc "Manage tasks, orchestrate agents, review changes, and ship value"
   homepage "https://github.com/kdlbs/kandev"
   license "AGPL-3.0-only"
-  version "0.51.0"
+  version "0.52.0"
 
   # Node is required: the CLI launcher and Next.js standalone server both need it.
   depends_on "node"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/kdlbs/kandev/releases/download/v0.51.0/kandev-macos-arm64.tar.gz"
-      sha256 "76e01d16acd71887c799ece47cc21c884ab7c3cff1f8d336e52e9bb008975cc7"
+      url "https://github.com/kdlbs/kandev/releases/download/v0.52.0/kandev-macos-arm64.tar.gz"
+      sha256 "9d1876dfdf22f33e302058a05f1d768a96c69b343bd8c8bb83469753ad914396"
     else
-      url "https://github.com/kdlbs/kandev/releases/download/v0.51.0/kandev-macos-x64.tar.gz"
-      sha256 "731bdf6855a6f9b12198eb0f90e5894185a22ded1bd2a9f392a51afd88e818d5"
+      url "https://github.com/kdlbs/kandev/releases/download/v0.52.0/kandev-macos-x64.tar.gz"
+      sha256 "f3c11f5e699068328ddf8b6b3b91eee812a0bb5bca98f4cddf9d317ce51b5d03"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/kdlbs/kandev/releases/download/v0.51.0/kandev-linux-arm64.tar.gz"
-      sha256 "4b54a54a545032e6be7fecafa160198bb6006bcaeecf04592427e240fa44f146"
+      url "https://github.com/kdlbs/kandev/releases/download/v0.52.0/kandev-linux-arm64.tar.gz"
+      sha256 "7708eb46616e7dad3abd1566d0db967e3c8c52e8aa8af86e9c715f931c4acd1f"
     else
-      url "https://github.com/kdlbs/kandev/releases/download/v0.51.0/kandev-linux-x64.tar.gz"
-      sha256 "a35bc1e0cbddea51b8a34b65c9619ac192a91340092cee312a8182c3f7f6d4bb"
+      url "https://github.com/kdlbs/kandev/releases/download/v0.52.0/kandev-linux-x64.tar.gz"
+      sha256 "bb9baf7fc5375827f84f559a340b6907a3740e52b890d1f5afb4f3156a77bdf2"
     end
   end
 
