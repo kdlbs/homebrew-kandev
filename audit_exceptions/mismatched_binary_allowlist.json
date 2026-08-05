@@ -1,0 +1,8 @@
+{
+  "kandev": [
+    "libexec/bin/agentctl-darwin-amd64",
+    "libexec/bin/agentctl-darwin-arm64",
+    "libexec/bin/agentctl-linux-amd64",
+    "libexec/bin/agentctl-linux-arm64"
+  ]
+}
