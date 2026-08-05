@@ -3,7 +3,6 @@
 class Kandev < Formula
   desc "Manage tasks, orchestrate agents, review changes, and ship value"
   homepage "https://github.com/kdlbs/kandev"
-  version "0.85.0"
   license "AGPL-3.0-only"
 
   on_macos do
