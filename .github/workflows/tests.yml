@@ -1,4 +1,4 @@
-name: brew test-bot
+name: Homebrew
 
 on:
   push:
@@ -14,11 +14,11 @@ permissions:
   pull-requests: read
 
 jobs:
-  test-bot:
+  test:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-22.04, macos-15-intel, macos-26]
+        os: [ubuntu-24.04, macos-15-intel, macos-26]
     runs-on: ${{ matrix.os }}
     steps:
       - name: Set up Homebrew
@@ -27,7 +27,17 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - run: brew test-bot --only-cleanup-before
-      - run: brew test-bot --only-setup
-      - run: brew test-bot --only-tap-syntax
-      - run: brew test-bot --only-formulae
+      - name: Check formula syntax and style
+        run: |
+          brew style kdlbs/kandev
+          brew readall --aliases --os=all --arch=all kdlbs/kandev
+
+      - name: Install and test formula
+        run: |
+          brew install kdlbs/kandev/kandev
+          brew test kdlbs/kandev/kandev
+          brew linkage --test kdlbs/kandev/kandev
+          brew livecheck kdlbs/kandev/kandev
+          # The URL-only scanner sees the release tag, but conditional asset
+          # names make Homebrew infer 64 unless the formula sets its version.
+          brew audit --strict --online --except=version kdlbs/kandev/kandev
