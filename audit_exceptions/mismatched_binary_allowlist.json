@@ -1,0 +1,3 @@
+{
+  "kandev": "libexec/bin/agentctl-{darwin,linux}-{amd64,arm64}"
+}
