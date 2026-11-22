@@ -6,26 +6,26 @@ class Kandev < Formula
   desc "Manage tasks, orchestrate agents, review changes, and ship value"
   homepage "https://github.com/kdlbs/kandev"
   # Conditional asset names end in x64/arm64; without this, Homebrew uses version 64.
-  version "0.102.0"
+  version "0.103.0"
   license "AGPL-3.0-only"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/kdlbs/kandev/releases/download/v0.102.0/kandev-macos-arm64.tar.gz"
-      sha256 "2ad416dafcfd5a36eca20d76d06aceca526218e56313f7ca4e62a87ae7588742"
+      url "https://github.com/kdlbs/kandev/releases/download/v0.103.0/kandev-macos-arm64.tar.gz"
+      sha256 "40852121ddb84d932e75b77634e495494b6b8ed4a7f29b3ee79e4eec13f61b77"
     else
-      url "https://github.com/kdlbs/kandev/releases/download/v0.102.0/kandev-macos-x64.tar.gz"
-      sha256 "07107363139df6aff16a5f4843a8977b032de20703c038083933c7944cb9f92d"
+      url "https://github.com/kdlbs/kandev/releases/download/v0.103.0/kandev-macos-x64.tar.gz"
+      sha256 "1fc01aa4706dd55ff9b88110cdffa852d602057d8ba04238f3b4d036e260cbc7"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/kdlbs/kandev/releases/download/v0.102.0/kandev-linux-arm64.tar.gz"
-      sha256 "afe8a2323572be9fda812e2c40f151c30bfaf6217efedc92a8b0d21e0a28d1c1"
+      url "https://github.com/kdlbs/kandev/releases/download/v0.103.0/kandev-linux-arm64.tar.gz"
+      sha256 "b3fe846ff22a24bdd2ed03e75b50692c4b2c7c46fa3976808e6bac78a2c49500"
     else
-      url "https://github.com/kdlbs/kandev/releases/download/v0.102.0/kandev-linux-x64.tar.gz"
-      sha256 "e1e40dd6e658564de665b2efd4b78d62070b7ba5c66620ab492d5d0e491b628b"
+      url "https://github.com/kdlbs/kandev/releases/download/v0.103.0/kandev-linux-x64.tar.gz"
+      sha256 "df39be94820af9b4f82635f575b818c6bde2e30b41ffb15c96828398f2575eae"
     end
   end
 
